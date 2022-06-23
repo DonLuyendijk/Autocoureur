@@ -35,5 +35,5 @@ displacementPerWheelAngle = sp.radiansPerDegree * wheelRadius
 wheelBase = 0.40
 wheelShift = wheelBase / 2
 
-apertureAngle = 120
+apertureAngle = 140
 middleApertureAngle = 45
