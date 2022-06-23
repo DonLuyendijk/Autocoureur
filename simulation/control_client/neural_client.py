@@ -68,6 +68,7 @@ class NeuralClient:
         else:
             self.sonarDistances = sensors ['sonarDistances']
 
+    # Use the neural net to predict the steeringAngle
     def sweep (self):
         sample = [pm.finity for entryIndex in range (pm.lidarInputDim)]
 

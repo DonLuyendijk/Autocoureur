@@ -9,21 +9,10 @@ inputs = lines[:, :-1]
 outputs = lines[:, -1]
 
 neural_net = MLPRegressor(
-    max_iter = 600,
-    hidden_layer_sizes = (20, 50, 100, 50, 20),
-	solver = 'adam',
-    learning_rate_init = 0.001,
-    n_iter_no_change = 50,
-	verbose = True
+    max_iter = 40000,
+    hidden_layer_sizes = (120),
+    alpha = 1
 ).fit(inputs, outputs)
-
-tests = [
-    (inputs[i], outputs[i])
-    for i in [100, 200, 300, 400, 500, 600]
-]
-
-for test in tests:
-    print(f'prediction: {neural_net.predict([test[0]])}, target: {test[1]}')
 
 print('score:', neural_net.score(inputs, outputs))
 
